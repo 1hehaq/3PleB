@@ -61,12 +61,12 @@ install_tools() {
       start_time=$(date +%s)
       case $tool in
         x8) git clone https://github.com/Sh1Yo/x8 && echo -e "\nDo this: cd x8 && cargo build --release && mv x8 /usr/bin && cd .. && rm -rf x8\n" ;;
-        urldedupe) go install -v github.com/1ndianl33t/urldedupe@latest ;;
+        urldedupe) git clone https://github.com/ameenmaali/urldedupe.git && cd urldedupe && cmake CMakeLists.txt && make && mv urldedupe /usr/bin && cd .. && rm -rf urldedupe ;;
         qsreplace) go install -v github.com/tomnomnom/qsreplace@latest ;;
         gau) go install -v github.com/lc/gau/v2/cmd/gau@latest ;;
         gf) go install -v github.com/tomnomnom/gf@latest ;;
         waybackurls) go install -v github.com/tomnomnom/waybackurls@latest ;;
-        uro) go install -v github.com/s0md3v/uro@latest ;;
+        uro) pip3 install uro ;;
         ffuf) go install -v github.com/ffuf/ffuf@latest ;;
         anew) go install -v github.com/tomnomnom/anew@latest ;;
         subfinder) go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest ;;
