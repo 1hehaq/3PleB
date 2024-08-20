@@ -63,12 +63,12 @@ install_tools() {
         x8) git clone https://github.com/Sh1Yo/x8 && echo -e "\nDo this: cd x8 && cargo build --release && mv x8 /usr/bin && cd .. && rm -rf x8\n" ;;
         urldedupe) git clone https://github.com/ameenmaali/urldedupe.git && cd urldedupe && cmake CMakeLists.txt && make && mv urldedupe /usr/bin && cd .. && rm -rf urldedupe ;;
         qsreplace) wget https://github.com/tomnomnom/qsreplace/releases/download/v0.0.3/qsreplace-linux-amd64-0.0.3.tgz && tar xvf qsreplace-linux-amd64-0.0.3.tgz && mv qsreplace /usr/bin/ &&  rm -rf qsreplace-linux-amd64-0.0.3.tgz ;;
-        gau) go install -v github.com/lc/gau/v2/cmd/gau@latest ;;
+        gau) wget https://github.com/lc/gau/releases/download/v2.2.3/gau_2.2.3_linux_amd64.tar.gz && tar xvf gau_2.2.3_linux_amd64.tar.gz && mv gau /usr/bin && rm -rf gau_2.2.3_linux_amd64.tar.gz LICENSE README.md ;;
         gf) go install -v github.com/tomnomnom/gf@latest ;;
-        waybackurls) go install -v github.com/tomnomnom/waybackurls@latest ;;
+        waybackurls) wget https://github.com/tomnomnom/waybackurls/releases/download/v0.1.0/waybackurls-linux-amd64-0.1.0.tgz && tar xvf waybackurls-linux-amd64-0.1.0.tgz && mv waybackurls /usr/bin && rm -rf waybackurls-linux-amd64-0.1.0.tgz ;;
         uro) pip3 install uro ;;
         ffuf) go install -v github.com/ffuf/ffuf@latest ;;
-        anew) go install -v github.com/tomnomnom/anew@latest ;;
+        anew) wget https://github.com/tomnomnom/anew/releases/download/v0.1.1/anew-linux-amd64-0.1.1.tgz && tar xvf anew-linux-amd64-0.1.1.tgz && mv anew /usr/bin/ && rm -rf anew-linux-amd64-0.1.1.tgz ;;
         subfinder) go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest ;;
         httpx) go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest ;;
         nmap) sudo apt-get install -y nmap ;;
@@ -78,10 +78,10 @@ install_tools() {
         assetfinder) sudo  apt-get install -y assetfinder ;;
         nuclei) sudo apt-get install -y nuclei ;;
         massdns) sudo apt-get install -y massdns ;;
-        shuffledns) go install -v github.com/projectdiscovery/shuffledns/cmd/shuffledns@latest ;;
-        paramspider) git clone https://github.com/0xKayala/ParamSpider && echo -e "\nDo this: cd ParamSpider && pip3 install -r requirements.txt && cd ..\n" ;;
+        shuffledns) wget https://github.com/projectdiscovery/shuffledns/releases/download/v1.1.0/shuffledns_1.1.0_linux_amd64.zip && unzip shuffledns_1.1.0_linux_amd64.zip && mv shuffledns /usr/bin && rm -rf README.md LICENSE.md shuffledns_1.1.0_linux_amd64.zip  ;;
+        paramspider) git clone https://github.com/devanshbatham/paramspider && cd paramspider && pip install . && python3 setup.py install && cd .. && rm -rf paramspider ;;
         arjun) sudo apt-get install -y arjun ;;
-        katana) go install github.com/projectdiscovery/katana/cmd/katana@latest ;;
+        katana) wget https://github.com/projectdiscovery/katana/releases/download/v1.1.0/katana_1.1.0_linux_amd64.zip && unzip katana_1.1.0_linux_amd64.zip && mv katana /usr/bin && rm -rf LICENSE.md README.md katana_1.1.0_linux_amd64.zip ;;
         sqlmap) sudo apt-get install -y sqlmap ;;
         ghauri) git clone https://github.com/r0oth3x49/ghauri.git && cd ghauri && pip3 install -r requirements.txt && python3 setup.py install && cd .. && rm -rf ghauri ;;
         
