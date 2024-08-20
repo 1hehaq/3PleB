@@ -62,7 +62,7 @@ install_tools() {
       case $tool in
         x8) git clone https://github.com/Sh1Yo/x8 && echo -e "\nDo this: cd x8 && cargo build --release && mv x8 /usr/bin && cd .. && rm -rf x8\n" ;;
         urldedupe) git clone https://github.com/ameenmaali/urldedupe.git && cd urldedupe && cmake CMakeLists.txt && make && mv urldedupe /usr/bin && cd .. && rm -rf urldedupe ;;
-        qsreplace) go install -v github.com/tomnomnom/qsreplace@latest ;;
+        qsreplace) wget https://github.com/tomnomnom/qsreplace/releases/download/v0.0.3/qsreplace-linux-amd64-0.0.3.tgz && tar xvf qsreplace-linux-amd64-0.0.3.tgz && mv qsreplace /usr/bin/ &&  rm -rf qsreplace-linux-amd64-0.0.3.tgz ;;
         gau) go install -v github.com/lc/gau/v2/cmd/gau@latest ;;
         gf) go install -v github.com/tomnomnom/gf@latest ;;
         waybackurls) go install -v github.com/tomnomnom/waybackurls@latest ;;
