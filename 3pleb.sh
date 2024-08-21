@@ -62,7 +62,7 @@ install_tools() {
       echo -e "\033[38;5;133m[!] $tool is not installed, Preparing to install...\e[0m"
       start_time=$(date +%s)
       case $tool in
-        x8) git clone https://github.com/Sh1Yo/x8 && echo -e "\nDo this: cd x8 && cargo build --release && mv x8 /usr/bin && cd .. && rm -rf x8\n" ;;
+        x8) git clone https://github.com/Sh1Yo/x8 && cd x8 && sudo apt-get install libssl-dev && cargo build --release && cd target/release/ && mv x8 /usr/bin/ && cd .. && cd .. && cd .. && rm -rf x8 ;;
         urldedupe) git clone https://github.com/ameenmaali/urldedupe.git && cd urldedupe && cmake CMakeLists.txt && make && mv urldedupe /usr/bin && cd .. && rm -rf urldedupe ;;
         qsreplace) wget https://github.com/tomnomnom/qsreplace/releases/download/v0.0.3/qsreplace-linux-amd64-0.0.3.tgz && tar xvf qsreplace-linux-amd64-0.0.3.tgz && mv qsreplace /usr/bin/ &&  rm -rf qsreplace-linux-amd64-0.0.3.tgz ;;
         gau) wget https://github.com/lc/gau/releases/download/v2.2.3/gau_2.2.3_linux_amd64.tar.gz && tar xvf gau_2.2.3_linux_amd64.tar.gz && mv gau /usr/bin && rm -rf gau_2.2.3_linux_amd64.tar.gz LICENSE README.md ;;
