@@ -1,6 +1,8 @@
 #!/bin/bash
 # Author: 1hehaq
 
+clear
+
 # Banner
 echo -e "
 \033[1;32m
