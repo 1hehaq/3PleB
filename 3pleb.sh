@@ -26,17 +26,21 @@ echo -e "\n"
 
 # For Installing packages
 install_packages() {
-    packages=("go" "cmake" "pip" "cargo")
+    packages=("unzip" "wget" "tar" "go" "cmake" "pip" "cargo" "ruby")
 
     for package in "${packages[@]}"; do
         if ! command -v $package > /dev/null 2>&1; then
             echo -e "\\033[38;5;133m[!] $package is not installed. Preparing to install...\e[0m"
             start_time=$(date +%s)
             case $package in
+                unzip) sudo apt-get install -y unzip ;;
+                wget) sudo apt-get install -y wget ;;
+                tar) sudo apt-get install -y tar ;;
                 go) sudo apt-get install -y golang ;;
                 cmake) sudo apt-get install -y cmake ;;
                 pip) sudo apt-get install -y python3-pip ;;
                 cargo) sudo apt install -y cargo ;;
+                ruby) sudo apt install -y ruby-rubygems ;;
             esac
             install_status=$?
             end_time=$(date +%s)
@@ -55,13 +59,29 @@ install_packages() {
 
 # For Installing tools
 install_tools() {
-  tools=("x8" "urldedupe" "qsreplace" "gau" "gf" "waybackurls" "uro" "ffuf" "anew" "subfinder" "httpx" "nmap" "dirsearch" "amass" "sublist3r" "assetfinder" "nuclei" "massdns" "shuffledns" "paramspider" "arjun" "katana" "sqlmap" "ghauri")
+  tools=("xsstrike" "dalfox" "puredns" "httprobe" "naabu" "hakrawler" "gospider" "LinkFinder" "SecretFinder" "subjs" "xnLinkFinder" "cors" "gobuster" "nikto" "wpscan" "jq" "x8" "urldedupe" "qsreplace" "gau" "gf" "waybackurls" "uro" "ffuf" "anew" "subfinder" "httpx" "nmap" "dirsearch" "amass" "sublist3r" "assetfinder" "nuclei" "massdns" "shuffledns" "paramspider" "arjun" "katana" "sqlmap" "ghauri")
 
   for tool in "${tools[@]}"; do
     if ! command -v $tool > /dev/null 2>&1; then
       echo -e "\033[38;5;133m[!] $tool is not installed, Preparing to install...\e[0m"
       start_time=$(date +%s)
       case $tool in
+        xsstrike) sudo pip3 install xsstrike ;;
+        dalfox) wget https://github.com/hahwul/dalfox/releases/download/v2.9.2/dalfox_2.9.2_linux_amd64.tar.gz && tar xvf dalfox_2.9.2_linux_amd64.tar.gz && mv dalfox /usr/bin/ && rm -rf dalfox_2.9.2_linux_amd64.tar.gz README.md LICENSE.txt ;;
+        puredns) wget https://github.com/d3mondev/puredns/releases/download/v2.1.1/puredns-Linux-amd64.tgz && tar xvf puredns-Linux-amd64.tgz && mv puredns /usr/bin/ && rm -rf puredns-Linux-amd64.tgz ;;
+        httprobe) wget https://github.com/tomnomnom/httprobe/releases/download/v0.2/httprobe-linux-amd64-0.2.tgz && tar xvf httprobe-linux-amd64-0.2.tgz && mv httprobe /usr/bin/ && rm -rf httprobe-linux-amd64-0.2.tgz ;;
+        naabu) wget https://github.com/projectdiscovery/naabu/releases/download/v2.3.1/naabu_2.3.1_linux_amd64.zip && unzip naabu_2.3.1_linux_amd64.zip && mv naabu /usr/bin/ && rm -rf naabu_2.3.1_linux_amd64.zip ;;
+        hakrawler) sudo apt-get install -y hakrawler ;;
+        gospider) wget https://github.com/jaeles-project/gospider/releases/download/v1.1.6/gospider_v1.1.6_linux_i386.zip && unzip gospider_v1.1.6_linux_i386.zip && cd gospider_v1.1.6_linux_i386 && mv gospider /usr/bin/ && cd .. && rm -rf gospider_v1.1.6_linux_i386 gospider_v1.1.6_linux_i386.zip ;;
+        LinkFinder) git clone https://github.com/GerbenJavado/LinkFinder.git && cd LinkFinder && pip3 install -r requirements.txt && mv linkfinder.py LinkFinder && chmod +x LinkFinder && sed -i '1i #!/usr/bin/python3' LinkFinder && mv LinkFinder /usr/bin && cd .. && rm -rf LinkFinder ;;
+        SecretFinder) sudo git clone https://github.com/m4ll0k/SecretFinder.git && cd SecretFinder && pip3 install -r requirements.txt && mv SecretFinder.py SecretFinder && chmod +x SecretFinder && mv SecretFinder /usr/bin && cd .. && rm -rf SecretFinder && sed -i '1i #!/usr/bin/python3' /usr/bin/SecretFinder ;;
+        subjs) wget https://github.com/lc/subjs/releases/download/v1.0.1/subjs_1.0.1_linux_amd64.tar.gz && tar xvf subjs_1.0.1_linux_amd64.tar.gz && mv subjs /usr/bin/ && rm -rf LICENSE README.md subjs_1.0.1_linux_amd64.tar.gz ;;
+        xnLinkFinder) pip install xnLinkFinder ;;
+        cors) sudo pip3 install cors ;;
+        gobuster) wget https://github.com/OJ/gobuster/releases/download/v3.6.0/gobuster_Linux_i386.tar.gz && tar xvf gobuster_Linux_i386.tar.gz && mv gobuster /usr/bin/ && rm -rf README.md LICENSE gobuster_Linux_i386.tar.gz ;;
+        nikto)  sudo apt-get install -y nikto ;;
+        wpscan) gem install wpscan ;;
+        jq) sudo apt-get install -y jq ;;
         x8) git clone https://github.com/Sh1Yo/x8 && cd x8 && sudo apt-get install libssl-dev && cargo build --release && cd target/release/ && mv x8 /usr/bin/ && cd .. && cd .. && cd .. && rm -rf x8 ;;
         urldedupe) git clone https://github.com/ameenmaali/urldedupe.git && cd urldedupe && cmake CMakeLists.txt && make && mv urldedupe /usr/bin && cd .. && rm -rf urldedupe ;;
         qsreplace) wget https://github.com/tomnomnom/qsreplace/releases/download/v0.0.3/qsreplace-linux-amd64-0.0.3.tgz && tar xvf qsreplace-linux-amd64-0.0.3.tgz && mv qsreplace /usr/bin/ &&  rm -rf qsreplace-linux-amd64-0.0.3.tgz ;;
