@@ -2,7 +2,7 @@
 
 ![3Ple B](https://img.shields.io/badge/Bug%20Bounty-Bundle-green) ![License](https://img.shields.io/github/license/1hehaq/3PleB)
 
-3Ple B (Triple B) is a bash script designed to automate the installation of the most popular tools used in bug bounty hunting and penetration testing. This bundle ensures that you have everything you need in one place, without the hassle of installing each tool manually.
+3Ple B stands out for its portability and efficiency. It streamlines the setup process by installing only the essential tools for bug bounty and penetration testing, avoiding unnecessary software. Whether you're configuring a new OS, VMs, or cloud instances, this single script ensures a clean, consistent setup with minimal effort. It keeps your system lightweight and high-performing by focusing only on what's needed.
 
 ----
 
@@ -15,10 +15,6 @@ The `3Ple B` script handles:
 →  Automated installation of various bug bounty tools, including subdomain enumeration, fuzzing, web reconnaissance, and more.
 
 →  A detailed list of recommended wordlists to be manually installed for enhanced performance.
-
-### Portability and Minimal Setup
-
-3Ple B stands out for its portability and efficiency. It streamlines the setup process by installing only the essential tools for bug bounty and penetration testing, avoiding unnecessary software. Whether you're configuring a new OS, VMs, or cloud instances, this single script ensures a clean, consistent setup with minimal effort. It keeps your system lightweight and high-performing by focusing only on what's needed.
 
 ### Workflow Example
 ----
