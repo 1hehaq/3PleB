@@ -150,3 +150,5 @@ please_manually_install() {
 install_packages
 install_tools
 please_manually_install
+
+if [ -n "$ZSH_VERSION" ]; then echo "export PATH=\$PATH:$(go env GOPATH)/bin" >> ~/.zshrc && source ~/.zshrc; elif [ -n "$BASH_VERSION" ]; then echo "export PATH=\$PATH:$(go env GOPATH)/bin" >> ~/.bashrc && source ~/.bashrc; fi
