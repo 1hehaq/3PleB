@@ -1,6 +1,6 @@
 #!/bin/bash
 # Author: 1hehaq
-
+sudo apt-get -y update && sudo apt-get -y upgrade
 clear
 
 # Banner
@@ -36,7 +36,7 @@ install_packages() {
                 unzip) sudo apt-get install -y unzip ;;
                 wget) sudo apt-get install -y wget ;;
                 tar) sudo apt-get install -y tar ;;
-                go) sudo apt-get install -y golang ;;
+                go) sudo apt-get install -y golang golang-go gccgo ;;
                 cmake) sudo apt-get install -y cmake ;;
                 pip) sudo apt-get install -y python3-pip ;;
                 cargo) sudo apt install -y cargo ;;
@@ -80,7 +80,7 @@ install_tools() {
         cors) sudo pip3 install cors ;;
         gobuster) wget https://github.com/OJ/gobuster/releases/download/v3.6.0/gobuster_Linux_i386.tar.gz && tar xvf gobuster_Linux_i386.tar.gz && mv gobuster /usr/bin/ && rm -rf README.md LICENSE gobuster_Linux_i386.tar.gz ;;
         nikto)  sudo apt-get install -y nikto ;;
-        wpscan) gem install wpscan ;;
+        wpscan) gem install wpscan || sudo apt-get install -y wpscan ;;
         jq) sudo apt-get install -y jq ;;
         x8) git clone https://github.com/Sh1Yo/x8 && cd x8 && sudo apt-get install libssl-dev && cargo build --release && cd target/release/ && mv x8 /usr/bin/ && cd .. && cd .. && cd .. && rm -rf x8 ;;
         urldedupe) git clone https://github.com/ameenmaali/urldedupe.git && cd urldedupe && cmake CMakeLists.txt && make && mv urldedupe /usr/bin && cd .. && rm -rf urldedupe ;;
@@ -89,9 +89,9 @@ install_tools() {
         gf) go install -v github.com/tomnomnom/gf@latest ;;
         waybackurls) wget https://github.com/tomnomnom/waybackurls/releases/download/v0.1.0/waybackurls-linux-amd64-0.1.0.tgz && tar xvf waybackurls-linux-amd64-0.1.0.tgz && mv waybackurls /usr/bin && rm -rf waybackurls-linux-amd64-0.1.0.tgz ;;
         uro) pip3 install uro ;;
-        ffuf) go install -v github.com/ffuf/ffuf@latest ;;
+        ffuf) sudo apt-get install -y ffuf || go install -v github.com/ffuf/ffuf@latest ;;
         anew) wget https://github.com/tomnomnom/anew/releases/download/v0.1.1/anew-linux-amd64-0.1.1.tgz && tar xvf anew-linux-amd64-0.1.1.tgz && mv anew /usr/bin/ && rm -rf anew-linux-amd64-0.1.1.tgz ;;
-        subfinder) go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest ;;
+        subfinder) sudo apt-get install -y subfinder || go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest ;;
         httpx) go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest ;;
         nmap) sudo apt-get install -y nmap ;;
         dirsearch) sudo apt-get install -y dirsearch ;;
