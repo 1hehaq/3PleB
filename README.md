@@ -26,9 +26,17 @@ The `3Ple B` script handles:
 
 ----
 
-## Installed Tools
+## Included Tools
 
-`unzip` • `wget` • `tar` • `go` • `cmake` • `pip` • `cargo` • `ruby` • `xsstrike` • `dalfox` • `puredns` • `httprobe` • `naabu` • `hakrawler` • `gospider` • `LinkFinder` • `SecretFinder` • `subjs` • `xnLinkFinder` • `cors` • `gobuster` • `nikto` • `wpscan` • `jq` • `x8` • `urldedupe` • `qsreplace` • `gau` • `gf` • `waybackurls` • `uro` • `ffuf` • `anew` • `subfinder` • `httpx` • `nmap` • `dirsearch` • `amass` • `sublist3r` • `assetfinder` • `nuclei` • `massdns` • `shuffledns` • `paramspider` • `arjun` • `katana` • `sqlmap` • `ghauri`
+|                |              |             |            |            |             |             |
+|----------------|--------------|-------------|------------|------------|-------------|-------------|
+| `unzip`          | `wget`         | `tar`         | `go`         | `cmake`      | `pip`         | `cargo`       |
+| `ruby`           | `xsstrike`     | `dalfox`      | `puredns`    | `httprobe`   | `naabu`       | `hakrawler`   |
+| `gospider`       | `LinkFinder`   | `SecretFinder` | `subjs`      | `xnLinkFinder` | `cors`       | `gobuster`    |
+| `nikto`          | `wpscan`       | `jq`          | `x8`         | `urldedupe`  | `qsreplace`   | `gau`         |
+| `gf`             | `waybackurls`  | `uro`         | `ffuf`       | `anew`       | `subfinder`   | `httpx`       |
+| `nmap`           | `dirsearch`    | `amass`       | `sublist3r`  | `assetfinder` | `nuclei`      | `massdns`     |
+| `shuffledns`     | `paramspider`  | `arjun`       | `katana`     | `sqlmap`     | `ghauri`      |             |
 
 
 ### Prerequisites
