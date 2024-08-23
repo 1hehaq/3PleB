@@ -26,17 +26,9 @@ The `3Ple B` script handles:
 
 ----
 
-### Tools Included
+## Installed Tools
 
-
-| Category                | Tools                                                                                     |
-|-------------------------|-------------------------------------------------------------------------------------------|
-| **Packages**| `Go`, `CMake`, `Pip`, `Cargo`                                                                     |
-| **Subdomain Enumeration**| `subfinder`, `amass`, `assetfinder`, `massdns`, `shuffledns`, `sublist3r`                 |
-| **Web Recon**            | `httpx`, `gau`, `waybackurls`, `katana`, `ffuf`, `dirsearch`, `x8`, `qsreplace`           |
-| **Fuzzing**              | `ffuf`, `dirsearch`, `ParamSpider`, `arjun`, `bbFuzzing`                                  |
-| **Vulnerability Scanning**| `nuclei`, `nmap`, `sqlmap`, `ghauri`                                                      |
-| **Filtering/Parsing**    | `gf`, `anew`, `urldedupe`, `uro`                                                          |
+`unzip` • `wget` • `tar` • `go` • `cmake` • `pip` • `cargo` • `ruby` • `xsstrike` • `dalfox` • `puredns` • `httprobe` • `naabu` • `hakrawler` • `gospider` • `LinkFinder` • `SecretFinder` • `subjs` • `xnLinkFinder` • `cors` • `gobuster` • `nikto` • `wpscan` • `jq` • `x8` • `urldedupe` • `qsreplace` • `gau` • `gf` • `waybackurls` • `uro` • `ffuf` • `anew` • `subfinder` • `httpx` • `nmap` • `dirsearch` • `amass` • `sublist3r` • `assetfinder` • `nuclei` • `massdns` • `shuffledns` • `paramspider` • `arjun` • `katana` • `sqlmap` • `ghauri`
 
 
 ### Prerequisites
