@@ -102,7 +102,7 @@ install_tools() {
         massdns) sudo apt-get install -y massdns ;;
         shuffledns) wget https://github.com/projectdiscovery/shuffledns/releases/download/v1.1.0/shuffledns_1.1.0_linux_amd64.zip && unzip shuffledns_1.1.0_linux_amd64.zip && mv shuffledns /usr/bin && rm -rf README.md LICENSE.md shuffledns_1.1.0_linux_amd64.zip  ;;
         paramspider) git clone https://github.com/devanshbatham/paramspider && cd paramspider && pip install . && python3 setup.py install && cd .. && rm -rf paramspider ;;
-        arjun) sudo apt-get install -y arjun ;;
+        arjun) sudo pip3 install arjun ;;
         katana) wget https://github.com/projectdiscovery/katana/releases/download/v1.1.0/katana_1.1.0_linux_amd64.zip && unzip katana_1.1.0_linux_amd64.zip && mv katana /usr/bin && rm -rf LICENSE.md README.md katana_1.1.0_linux_amd64.zip ;;
         sqlmap) sudo apt-get install -y sqlmap ;;
         ghauri) git clone https://github.com/r0oth3x49/ghauri.git && cd ghauri && pip3 install -r requirements.txt && python3 setup.py install && cd .. && rm -rf ghauri ;;
