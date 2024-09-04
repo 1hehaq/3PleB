@@ -4,6 +4,8 @@
 
 3Ple B stands out for its portability and efficiency. It streamlines the setup process by installing only the essential tools for bug bounty and penetration testing, avoiding unnecessary software. Whether you're configuring a new OS, VMs, or cloud instances, this single script ensures a clean, consistent setup with minimal effort. It keeps your system lightweight and high-performing by focusing only on what's needed.
 
+![Screenshot 2024-09-04 131650](https://github.com/user-attachments/assets/fa8281e4-b1c8-4e14-85ca-9596ad94039a)
+
 ----
 
 ## Overview
